@@ -29,6 +29,7 @@ window.addEventListener('click', (e) => {
     }
 })
 
+
 //Form Validation
 //const form = document.getElementById('form')
 //const name = document.getElementById('name')
