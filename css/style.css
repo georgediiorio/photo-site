@@ -1,0 +1,250 @@
+/* Fonts  font-family: 'Montserrat', sans-serif;
+font-family: 'STIX Two Text', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=STIX+Two+Text:wght@600&display=swap');
+
+:root {
+  --primary:#ffa600;
+  --errorColor: #f00e0e;
+  --valColor: #0add0a;
+  --white:#fff;
+  --black:#000;
+  --gray:#666;
+}
+
+/* html reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  text-align: center;
+  color: #000;
+  margin: 20px;
+}
+
+.header a {
+  padding: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+}
+
+.header a:hover {
+  color: var(--primary);
+}
+
+.header a .logo:hover {
+  color: #000;
+}
+
+ul {
+  margin: 10px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gallery a {
+  height: 300px;
+  width: 200px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.gallery a img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  margin: 25px;
+}
+
+/* Modal Email */
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-content {
+  background: #f4f4f4;
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 3px;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1f, 1fr;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: var(--primary);
+  transition: 0.2s ease-out;
+}
+
+.modal-content-left {
+  background: linear-gradient(
+    90deg,
+    rgba(247, 74, 70, 1) 0% rgba(236, 43, 0, 1) 100%
+  );
+  border-radius: 0 3px 3px 0;
+  position: relative;
+}
+
+#modal-img {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content-right {
+  border-radius: 0 3px 3px 0;
+  position: relative;
+}
+
+.modal-form {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  transition: translate(50%, 50%);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.modal-form h1 {
+  text-align: start;
+  width: 80%;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.form-validation {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-validation.error {
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 1px solid var(--errorColor);
+  border-radius: 2px;
+}
+
+.form-validation.valid {
+  margin-bottom: 0.5rem;
+  position: relative;
+  border: 1px solid var(--valColor);
+  border-radius: 2px;
+}
+
+.form-validation p{
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    color: var(--errorColor);
+    position: absolute;
+    top: 1.8rem;
+    display: none;
+}
+
+.form-validation.error p{
+    display: block;
+}
+
+.modal-input {
+  display: block;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  height: 2rem;
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal-input::placeholder {
+  color: #666;
+}
+
+.modal-input-btn {
+  width: 80%;
+  height: 2rem;
+  border-radius: 2px;
+  background-color: #666;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.modal-input-btn:hover {
+  cursor: pointer;
+  background-color:var(--primary);
+  color: #000;
+  transition: all 0.4s ease-out;
+}
+
+
+@media  screen and (max-width: 768px) {
+    .modal-content-left{
+        display: none;
+    }
+
+    .modal-content{
+        grid-template-columns: auto;
+        margin: 15% auto;
+        width: 70%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .modal-content{
+        margin: 20% auto;
+        width: 90%;
+        height: 80%;
+    }
+}
