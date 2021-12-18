@@ -223,7 +223,6 @@ footer {
 .modal-input-btn:hover {
   cursor: pointer;
   background-color:var(--primary);
-  color: #000;
   transition: all 0.4s ease-out;
 }
 
