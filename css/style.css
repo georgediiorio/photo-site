@@ -3,7 +3,7 @@ font-family: 'STIX Two Text', serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=STIX+Two+Text:wght@600&display=swap');
 
 :root {
-  --primary:#ffa600;
+  --primary:#66023C;
   --errorColor: #f00e0e;
   --valColor: #0add0a;
   --white:#fff;
