@@ -1,5 +1,5 @@
 // LightGallery script
-lightGallery(document.querySelector('.gallery'), {
+lightGallery(document.getElementById('gallery'), {
     licenseKey: '69AC746A-62354883-977B764B-C1A34D5F',
     closeOnTap: true,
     escKey: true,
