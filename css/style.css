@@ -3,12 +3,12 @@ font-family: 'STIX Two Text', serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=STIX+Two+Text:wght@600&display=swap');
 
 :root {
-  --primary:#66023C;
+  --primary: #66023c;
   --errorColor: #f00e0e;
   --valColor: #0add0a;
-  --white:#fff;
-  --black:#000;
-  --gray:#666;
+  --white: #fff;
+  --black: #000;
+  --gray: #666;
 }
 
 /* html reset*/
@@ -18,39 +18,62 @@ font-family: 'STIX Two Text', serif;*/
   padding: 0;
 }
 
-/* Body Styling */
 body {
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
 
-.header {
-  text-align: center;
-  color: #000;
-  margin: 20px;
-}
-
-.header a {
-  padding: 15px;
-  text-decoration: none;
-  color: #000;
-}
-
-.logo {
-  text-align: center;
-  font-size: 40px;
-}
-
-.header a:hover {
-  color: var(--primary);
-}
-
-.header a .logo:hover {
-  color: #000;
+h1 {
+  margin-bottom: 15px;
 }
 
 ul {
-  margin: 10px;
+  list-style: none;
+}
+
+
+/* Navbar */
+
+.navbar{
+  height:60px;
+}
+
+.navbar .logo{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover{
+  color: var(--primary);
+}
+
+.navbar .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar ul li{
+  margin-left: 20px;
+}
+
+/* Body Styling */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 /* Gallery Styling */
@@ -181,17 +204,17 @@ footer {
   border-radius: 2px;
 }
 
-.form-validation p{
-    font-size: 0.7rem;
-    margin-top: 0.5rem;
-    color: var(--errorColor);
-    position: absolute;
-    top: 1.8rem;
-    display: none;
+.form-validation p {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: var(--errorColor);
+  position: absolute;
+  top: 1.8rem;
+  display: none;
 }
 
-.form-validation.error p{
-    display: block;
+.form-validation.error p {
+  display: block;
 }
 
 .modal-input {
@@ -222,28 +245,27 @@ footer {
 
 .modal-input-btn:hover {
   cursor: pointer;
-  background-color:var(--primary);
+  background-color: var(--primary);
   transition: all 0.4s ease-out;
 }
 
+@media screen and (max-width: 768px) {
+  .modal-content-left {
+    display: none;
+  }
 
-@media  screen and (max-width: 768px) {
-    .modal-content-left{
-        display: none;
-    }
-
-    .modal-content{
-        grid-template-columns: auto;
-        margin: 15% auto;
-        width: 70%;
-        height: 75%;
-    }
+  .modal-content {
+    grid-template-columns: auto;
+    margin: 15% auto;
+    width: 70%;
+    height: 75%;
+  }
 }
 
-@media screen and (max-width:580px){
-    .modal-content{
-        margin: 20% auto;
-        width: 90%;
-        height: 80%;
-    }
+@media screen and (max-width: 580px) {
+  .modal-content {
+    margin: 20% auto;
+    width: 90%;
+    height: 80%;
+  }
 }
