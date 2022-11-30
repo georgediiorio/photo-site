@@ -32,13 +32,19 @@
         <div class="modal-content">
           <span class="close-btn">&times;</span>
           <div class="modal-content-right">
-            <form name="contact" method="POST" class="modal-form" id="form" data-netlify="true">
+            <form name="contact" method="POST" class="modal-form" id="form" netlify-honeypot="bot-field"
+            data-netlify="true">
               <h1>client inquiries</h1>
               <div class="form-validation">
                 <input type="text" class="modal-input" id="name" name="name" placeholder="Enter Your Name">
                 <p>Error Message</p>
               </div>
               <div class="form-validation">
+                <p class="hidden">
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
                 <input type="email" class="modal-input" id="email" name="email" placeholder="Email Address" required>
                 <p>Error Message</p>
               </div>
